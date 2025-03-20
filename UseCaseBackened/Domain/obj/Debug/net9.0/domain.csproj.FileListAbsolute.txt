@@ -1,0 +1,11 @@
+C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\domain.AssemblyInfoInputs.cache
+C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\domain.AssemblyInfo.cs
+C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\domain.csproj.CoreCompileInputs.cache
+C:\UseCase\UseCaseBackened\Domain\bin\Debug\net9.0\domain.deps.json
+C:\UseCase\UseCaseBackened\Domain\bin\Debug\net9.0\domain.dll
+C:\UseCase\UseCaseBackened\Domain\bin\Debug\net9.0\domain.pdb
+C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\domain.dll
+C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\refint\domain.dll
+C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\domain.pdb
+C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\ref\domain.dll

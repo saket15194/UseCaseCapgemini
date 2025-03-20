@@ -1,0 +1,5 @@
+{
+  "api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\UseCase\\UseCaseBackened\\Api",
+  "data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\UseCase\\UseCaseBackened\\Data",
+  "domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\UseCase\\UseCaseBackened\\Domain"
+}

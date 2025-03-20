@@ -1,0 +1,15 @@
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.GeneratedMSBuildEditorConfig.editorconfig
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.AssemblyInfoInputs.cache
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.AssemblyInfo.cs
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.csproj.CoreCompileInputs.cache
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.csproj.AssemblyReference.cache
+C:\UseCase\UseCaseBackened\Data\bin\Debug\net9.0\data.deps.json
+C:\UseCase\UseCaseBackened\Data\bin\Debug\net9.0\data.dll
+C:\UseCase\UseCaseBackened\Data\bin\Debug\net9.0\data.pdb
+C:\UseCase\UseCaseBackened\Data\bin\Debug\net9.0\domain.dll
+C:\UseCase\UseCaseBackened\Data\bin\Debug\net9.0\domain.pdb
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.csproj.Up2Date
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.dll
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\refint\data.dll
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.pdb
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\ref\data.dll
