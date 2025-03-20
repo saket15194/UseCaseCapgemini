@@ -9,3 +9,4 @@ C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\domain.dll
 C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\refint\domain.dll
 C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\domain.pdb
 C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\ref\domain.dll
+C:\UseCase\UseCaseBackened\Domain\obj\Debug\net9.0\domain.sourcelink.json

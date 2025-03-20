@@ -9,7 +9,7 @@ namespace TaskTesting.Tests;
 public class UnitTest1
 {
     [Fact]
-    public void GetAllTaskMethod()
+    public void GetAllTaskMethod_ReturnTask()
     {
         //Arrange
          var _tasks = new List<TaskDetails>
@@ -30,5 +30,28 @@ public class UnitTest1
 
           //Assert
           Xunit.Assert.NotNull(result);
-}
+    }
+
+    [Fact]
+    public void GetAllTaskMethod_EditTask()
+    {
+        var _tasks = new TaskDetails
+        {
+            Name="Task3",
+            Priority=1,
+            Status="Inprogress"
+        };
+        string taskName="Task3";
+        var mockTaskRepository = new Mock<ITaskRepositry>();
+          mockTaskRepository.Setup(repo => repo.EditTask(taskName,_tasks))
+                             .Returns(_tasks); 
+
+        var controller = new TaskController(mockTaskRepository.Object);
+
+          //Act
+          var result=controller.EditTask(taskName,_tasks); 
+
+          //Assert
+          Xunit.Assert.Equal(result,_tasks);
+    }
 }

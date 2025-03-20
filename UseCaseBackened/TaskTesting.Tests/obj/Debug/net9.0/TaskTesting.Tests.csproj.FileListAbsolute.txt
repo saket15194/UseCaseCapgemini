@@ -436,3 +436,4 @@ C:\UseCase\UseCaseBackened\TaskTesting.Tests\obj\Debug\net9.0\refint\TaskTesting
 C:\UseCase\UseCaseBackened\TaskTesting.Tests\obj\Debug\net9.0\TaskTesting.Tests.pdb
 C:\UseCase\UseCaseBackened\TaskTesting.Tests\obj\Debug\net9.0\TaskTesting.Tests.genruntimeconfig.cache
 C:\UseCase\UseCaseBackened\TaskTesting.Tests\obj\Debug\net9.0\ref\TaskTesting.Tests.dll
+C:\UseCase\UseCaseBackened\TaskTesting.Tests\obj\Debug\net9.0\TaskTesting.Tests.sourcelink.json

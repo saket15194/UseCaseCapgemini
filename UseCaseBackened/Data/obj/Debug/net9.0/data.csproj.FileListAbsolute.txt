@@ -13,3 +13,4 @@ C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.dll
 C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\refint\data.dll
 C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.pdb
 C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\ref\data.dll
+C:\UseCase\UseCaseBackened\Data\obj\Debug\net9.0\data.sourcelink.json
