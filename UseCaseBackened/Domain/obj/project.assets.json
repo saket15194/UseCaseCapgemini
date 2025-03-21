@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\UseCase\\UseCaseBackened\\domain\\domain.csproj",
+      "projectUniqueName": "C:\\UseCase\\UseCaseBackened\\Domain\\domain.csproj",
       "projectName": "domain",
-      "projectPath": "C:\\UseCase\\UseCaseBackened\\domain\\domain.csproj",
+      "projectPath": "C:\\UseCase\\UseCaseBackened\\Domain\\domain.csproj",
       "packagesPath": "C:\\Users\\SAKETKUM\\.nuget\\packages\\",
-      "outputPath": "C:\\UseCase\\UseCaseBackened\\domain\\obj\\",
+      "outputPath": "C:\\UseCase\\UseCaseBackened\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SAKETKUM\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

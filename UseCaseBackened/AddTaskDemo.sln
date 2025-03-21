@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "data", "Data\data.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain", "Domain\domain.csproj", "{C9DBF26A-A8CA-48A4-A1DA-22D7F6BC952F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskIntegrationTestCases", "TaskIntegrationTestCases\TaskIntegrationTestCases.csproj", "{161E9C39-D274-4581-9F4C-E89729A038DB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTesting.Tests", "TaskTesting.Tests\TaskTesting.Tests.csproj", "{F9413E82-E1D2-4420-9FCC-B82D0DCE94CD}"
 EndProject
 Global

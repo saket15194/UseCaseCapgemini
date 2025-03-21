@@ -46,12 +46,17 @@ namespace Data
             }
         }
 
-        public void DeleteTask(List<string> name)
+        public int DeleteTask(string name)
         {
-            foreach(var taskname in name)
+            int result=0;
+            var existingtask = _tasks.FirstOrDefault(x => x.Name==name);
+            if(existingtask != null && existingtask.Status?.ToLower()=="completed")
             {
-                _tasks.RemoveAll(x=>x.Name==taskname);
+                result= _tasks.RemoveAll(x=>x.Name==name);
+
             }
+                
+            return result;
         }
 
 

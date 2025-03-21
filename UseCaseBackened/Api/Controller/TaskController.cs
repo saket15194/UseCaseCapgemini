@@ -15,13 +15,13 @@ namespace Api.Controllers
             this._taskRepositry = taskRepositry;
         }
 
-        [HttpGet("GetAllTask")]
+        [HttpGet("list-task")]
         public List<TaskDetails> GetAllTaskDetails()
         {
             return _taskRepositry.GetAllTask();
         }
 
-        [HttpPost("CreateTask")]
+        [HttpPost("create-task")]
         public IActionResult SubmitTast([FromBody]TaskDetails taskDetails)
         {
             var result= _taskRepositry.SubmitTask(taskDetails);
@@ -36,16 +36,26 @@ namespace Api.Controllers
             return Ok(taskDetails);
         }
 
-        [HttpPut("EditTask/{name}")]
+        [HttpPut("edit-task/{name}")]
         public TaskDetails EditTask(string name,[FromBody] TaskDetails taskDetails )
         {
             return _taskRepositry.EditTask(name,taskDetails);
         }
 
-        [HttpDelete("deleteTask")]
-        public void DeleteTask([FromBody] List<string> taskname )
+        [HttpDelete("delete-task")]
+        public IActionResult DeleteTask([FromBody] string taskname )
         {
-             _taskRepositry.DeleteTask(taskname);
+            var result= _taskRepositry.DeleteTask(taskname);
+
+            if(result==0)
+            {
+                return BadRequest("Task status should be completed");
+            }
+            else
+            {
+                return Ok("task is deleted");
+            }
+
         }
 
     }

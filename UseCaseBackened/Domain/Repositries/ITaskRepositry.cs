@@ -8,6 +8,6 @@ namespace Domain.Repositries
         int SubmitTask(TaskDetails task);
         TaskDetails EditTask(string name,TaskDetails task);
 
-        void DeleteTask(List<string> name);
+        int DeleteTask(string name);
     }
 }

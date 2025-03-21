@@ -13,6 +13,15 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<ITaskRepositry,TaskRepositry>(); // Register the manager
 
+ builder.Services.AddCors(options =>
+      {
+          options.AddPolicy("AllowAll", builder =>
+          {
+              builder.AllowAnyOrigin()
+                     .AllowAnyMethod()
+                     .AllowAnyHeader();
+          });
+      });
 
 var app = builder.Build();
 
@@ -28,7 +37,7 @@ if (app.Environment.IsDevelopment())
 app.MapControllers();
 app.UseSwagger();
 
-app.UseCors();
+app.UseCors("AllowAll");
 
 app.Run();
 
