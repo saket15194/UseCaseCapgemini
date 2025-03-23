@@ -61,3 +61,4 @@ C:\UseCase\UseCaseBackened\Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.d
 C:\UseCase\UseCaseBackened\Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\UseCase\UseCaseBackened\Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\UseCase\UseCaseBackened\Api\obj\Debug\net9.0\api.sourcelink.json
+C:\UseCase\UseCaseBackened\Api\bin\Debug\net9.0\Swashbuckle.AspNetCore.Annotations.dll

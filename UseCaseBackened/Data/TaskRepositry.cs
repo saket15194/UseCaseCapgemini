@@ -8,9 +8,9 @@ namespace Data
     {
         private readonly List<TaskDetails> _tasks = new List<TaskDetails>
         {
-            new TaskDetails{ Name="Task1", Priority=0, Status = "NotStarted"},
-            new TaskDetails{ Name="Task2", Priority=1,Status="InProgress" },
-            new TaskDetails{ Name="Task3", Priority=2,Status="Completed"},
+            new TaskDetails{ Name="Task1", Priority=1, Status = "NotStarted"},
+            new TaskDetails{ Name="Task2", Priority=2,Status="InProgress" },
+            new TaskDetails{ Name="Task3", Priority=3,Status="Completed"},
 
         };
 
@@ -21,7 +21,8 @@ namespace Data
         }
         public int SubmitTask(TaskDetails task)
         {
-            var IsTaskExist=_tasks.Any(x=>x.Name==task.Name);
+            task.Name=task.Name?.Trim();
+            var IsTaskExist=_tasks.Any(x=>x.Name==task.Name?.Trim());
             if(!IsTaskExist)
             {
                 _tasks.Add(task);
@@ -50,7 +51,8 @@ namespace Data
         {
             int result=0;
             var existingtask = _tasks.FirstOrDefault(x => x.Name==name);
-            if(existingtask != null && existingtask.Status?.ToLower()=="completed")
+            var existingtaskstatus=existingtask?.Status?.ToLower();
+            if(existingtask != null && existingtaskstatus.Equals("completed"))
             {
                 result= _tasks.RemoveAll(x=>x.Name==name);
 

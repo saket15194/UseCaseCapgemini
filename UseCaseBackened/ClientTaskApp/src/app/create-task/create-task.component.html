@@ -14,8 +14,8 @@
         <p>
             <label for="priority">Priority : </label>
             <input type="radio" value="1" name ="priority" [(ngModel)]="createTask.priority" required> 1
-            <input type="radio" value="2" name ="priority" ngModel required> 2
-            <input type="radio" value="3" name ="priority" ngModel required> 3
+            <input type="radio" value="2" name ="priority" [(ngModel)]="createTask.priority" required> 2
+            <input type="radio" value="3" name ="priority" [(ngModel)]="createTask.priority" required> 3
         </p>
     </div>
 
@@ -31,5 +31,13 @@
     </div>
         <button type="submit" [disabled]="!taskform.valid">Add Task </button>
     </div>
+
+
+    <div *ngIf="errorMessage" style="color: red; font-weight: bold;">
+        {{ errorMessage }}
+    </div>
+    <p *ngIf="successMessage" style="color: green; font-weight: bold;">
+        {{ successMessage }}
+      </p>
 </form>
 </div>

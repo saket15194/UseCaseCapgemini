@@ -22,8 +22,12 @@ namespace Api.Controllers
         }
 
         [HttpPost("create-task")]
-        public IActionResult SubmitTast([FromBody]TaskDetails taskDetails)
+        public IActionResult SubmitTest([FromBody]TaskDetails taskDetails)
         {
+            if (string.IsNullOrEmpty(taskDetails.Name))
+            {
+                return BadRequest("Task name cannot be empty.");
+            }
             var result= _taskRepositry.SubmitTask(taskDetails);
             if(!ModelState.IsValid)
             {
@@ -31,9 +35,9 @@ namespace Api.Controllers
             }
             if(result==0)
             {
-                return BadRequest("Name should be unique");
+                return BadRequest("Task with this name already exists");
             }
-            return Ok(taskDetails);
+            return Ok($"Task created successfully {taskDetails}");
         }
 
         [HttpPut("edit-task/{name}")]
@@ -43,17 +47,21 @@ namespace Api.Controllers
         }
 
         [HttpDelete("delete-task")]
-        public IActionResult DeleteTask([FromBody] string taskname )
+        public IActionResult DeleteTask([FromBody] string taskname)
         {
+            if (string.IsNullOrEmpty(taskname))
+            {
+                return BadRequest("Task name is required.");
+            }
             var result= _taskRepositry.DeleteTask(taskname);
 
             if(result==0)
             {
-                return BadRequest("Task status should be completed");
+                return BadRequest("Only completed Task can be deleted");
             }
             else
             {
-                return Ok("task is deleted");
+                return Ok("task is deleted successfully");
             }
 
         }

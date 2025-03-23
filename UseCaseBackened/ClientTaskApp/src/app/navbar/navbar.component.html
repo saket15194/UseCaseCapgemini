@@ -1,1 +1,16 @@
-<p>navbar works!</p>
+<!-- app.component.html -->
+<nav>
+<div class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="home">Home</a>
+          </li>
+        <li class="nav-item"><a class="nav-link"  routerLinkActive="active" routerLink="create-task">Create Task</a></li>
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="list-task" >List Tasks</a></li>
+        <li class="nav-item"><a class="nav-link"  routerLinkActive="active" routerLink="edit-task">Edit Task</a></li>
+      </ul>
+  </div>
+</nav>
+  <!-- Add RouterOutlet to display routed components -->
+  <!-- <router-outlet></router-outlet> -->
+  

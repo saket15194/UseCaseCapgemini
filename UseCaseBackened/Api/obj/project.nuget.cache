@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jUdOUogOZg4=",
+  "dgSpecHash": "QHROjmK4JfY=",
   "success": true,
   "projectFilePath": "C:\\UseCase\\UseCaseBackened\\Api\\api.csproj",
   "expectedPackageFiles": [
@@ -100,6 +100,7 @@
     "C:\\Users\\SAKETKUM\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\SAKETKUM\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\SAKETKUM\\.nuget\\packages\\swashbuckle.aspnetcore\\8.0.0\\swashbuckle.aspnetcore.8.0.0.nupkg.sha512",
+    "C:\\Users\\SAKETKUM\\.nuget\\packages\\swashbuckle.aspnetcore.annotations\\8.0.0\\swashbuckle.aspnetcore.annotations.8.0.0.nupkg.sha512",
     "C:\\Users\\SAKETKUM\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\8.0.0\\swashbuckle.aspnetcore.swagger.8.0.0.nupkg.sha512",
     "C:\\Users\\SAKETKUM\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\8.0.0\\swashbuckle.aspnetcore.swaggergen.8.0.0.nupkg.sha512",
     "C:\\Users\\SAKETKUM\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\8.0.0\\swashbuckle.aspnetcore.swaggerui.8.0.0.nupkg.sha512",
