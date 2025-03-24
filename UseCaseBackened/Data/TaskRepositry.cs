@@ -6,13 +6,14 @@ namespace Data
 {
     public class TaskRepositry : ITaskRepositry
     {
-        private readonly List<TaskDetails> _tasks = new List<TaskDetails>
-        {
-            new TaskDetails{ Name="Task1", Priority=1, Status = Domain.Entities.TaskStatus.NotStarted},
-            new TaskDetails{ Name="Task2", Priority=2,Status=Domain.Entities.TaskStatus.InProgress}, 
-            new TaskDetails{ Name="Task3", Priority=3,Status=Domain.Entities.TaskStatus.Completed},
+        private readonly List<TaskDetails> _tasks=new List<TaskDetails>();
+        // private readonly List<TaskDetails> _tasks = new List<TaskDetails>
+        // {
+        //     new TaskDetails{ Name="Task1", Priority=1, Status = Domain.Entities.TaskStatus.NotStarted},
+        //     new TaskDetails{ Name="Task2", Priority=2,Status=Domain.Entities.TaskStatus.InProgress}, 
+        //     new TaskDetails{ Name="Task3", Priority=3,Status=Domain.Entities.TaskStatus.Completed},
 
-        };
+        // };
 
               
         public List<TaskDetails>GetAllTask()

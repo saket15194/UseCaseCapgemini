@@ -20,10 +20,11 @@
     <div class="delete-task-container">
     <h2>Delete Task From The List</h2>
     <div>
-      <select [(ngModel)]="selectedTask">
-        <option *ngFor="let task of listtask">{{ task.name }}</option>
+      <label for="task">Task Name:</label>
+      <select id="task" [(ngModel)]="selectedTask" name ="task" required>
+        <option *ngFor="let task of listtask" [value]="task.name">{{ task.name }}</option>
       </select>
-      <button (click)="onDelete(selectedTask)">Delete</button>
+      <button (click)="onDelete()" [disabled]="!selectedTask">Delete</button>
     </div>
    </div>
    <br>

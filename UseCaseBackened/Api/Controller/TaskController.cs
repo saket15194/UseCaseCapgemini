@@ -83,11 +83,11 @@ namespace Api.Controllers
 
             if(result==0)
             {
-                return BadRequest("Only completed Task can be deleted");
+                return BadRequest($"Only completed Task can be deleted {taskname}");
             }
             else
             {
-                return Ok("task is deleted successfully");
+                return Ok($"task is deleted successfully {taskname}");
             }
 
         }

@@ -8,7 +8,8 @@ namespace Domain.Entities
 
              InProgress,
 
-             Completed
+             Completed,
+             Acccepted
      }
     public class TaskDetails
     {   
