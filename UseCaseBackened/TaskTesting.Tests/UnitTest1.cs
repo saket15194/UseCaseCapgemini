@@ -25,10 +25,28 @@ public class UnitTest1
         {
             Name="Task4",
             Priority=1,
-            Status="NotStarted"
+            Status=Domain.Entities.TaskStatus.NotStarted
         };
         var result=controller.SubmitTest(task);
         Xunit.Assert.NotNull(result);
+    }
+
+    [Fact]
+    public void submitTest_Fail_InvalidInput()
+    {
+        //controller.ModelState.AddModelError("Priority");
+       
+       var invalidmodel=new TaskDetails
+       {
+              Name="Task56",
+              Priority=10,
+              Status=Domain.Entities.TaskStatus.NotStarted
+
+       };
+
+        var result=controller.SubmitTest(invalidmodel);
+        var badRequestResult = Assert.IsType<BadRequestObjectResult>(result);
+        Assert.Equal("Priority should be between 1 to 3", badRequestResult.Value);
     }
 
     [Fact]
@@ -37,9 +55,9 @@ public class UnitTest1
         //Arrange
          var _tasks = new List<TaskDetails>
         {
-            new TaskDetails{ Name="Task1", Priority=0, Status = "NotStarted"},
-            new TaskDetails{ Name="Task2", Priority=1,Status="InProgress" },
-            new TaskDetails{ Name="Task3", Priority=2,Status="Completed"},
+            new TaskDetails{ Name="Task1", Priority=0, Status = Domain.Entities.TaskStatus.NotStarted},
+            new TaskDetails{ Name="Task2", Priority=1,Status=Domain.Entities.TaskStatus.InProgress}, 
+            new TaskDetails{ Name="Task3", Priority=2,Status=Domain.Entities.TaskStatus.Completed},
 
         };
           mockTaskRepository.Setup(repo => repo.GetAllTask())
@@ -51,26 +69,26 @@ public class UnitTest1
     }
 
     [Fact]
-    public void GetAllTaskMethod_EditTask()
+    public void GetEditTask_success()
     {
         var _tasks = new TaskDetails
         {
             Name="Task3",
             Priority=1,
-            Status="Inprogress"
+            Status=Domain.Entities.TaskStatus.InProgress
         };
         string taskName="Task3";
           mockTaskRepository.Setup(repo => repo.EditTask(taskName,_tasks))
-                             .Returns(_tasks); 
+                             .Returns(1); 
           //Act
           var result=controller.EditTask(taskName,_tasks); 
 
           //Assert
-          Xunit.Assert.Equal(result,_tasks);
+          Xunit.Assert.NotNull(result);
     }
 
     [Fact]
-    public void DeleteTask_success()
+    public void DeleteTask_successsfullly()
     {
         int result=1;
         string taskName="Task3";
@@ -82,25 +100,11 @@ public class UnitTest1
 
           //Assert
         var okResult = Assert.IsType<OkObjectResult>(result1);
-        Xunit.Assert.Equal("task is deleted successfully",okResult.Value);
+        Assert.Equal("task is deleted successfully",okResult.Value);
     }
 
      [Fact]
-    public void DeleteTask_ReturnsBadRequest_WhenTaskNameIsNullOrEmpty()
-    {
-        // Arrange
-        string taskName = string.Empty;
-
-        // Act
-        var actionResult = controller.DeleteTask(taskName);
-
-        // Assert
-        var badRequestResult = Assert.IsType<BadRequestObjectResult>(actionResult);
-        Assert.Equal("Task name is required.", badRequestResult.Value);
-    }
-
-     [Fact]
-    public void DeleteTask_ReturnsBadRequest_WhenTaskCannotBeDeleted()
+    public void DeleteTask_TaskCannotBeDeleted()
     {
         // Arrange
         int result = 0;

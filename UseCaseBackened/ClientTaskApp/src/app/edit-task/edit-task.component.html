@@ -28,5 +28,11 @@
     </div>
     <button type="submit">Submit</button>
     </div>
+    <div *ngIf="errorMessage" style="color: red; font-weight: bold;">
+      {{ errorMessage }}
+  </div>
+  <p *ngIf="successMessage" style="color: green; font-weight: bold;">
+      {{ successMessage }}
+    </p>
   </form>
 </div>

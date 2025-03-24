@@ -2,17 +2,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities
 {
-    //  public enum TaskStatus
-    //     {
-    //         [Display(Name = "NotStarted")]
-    //         NotStarted,
+      public enum TaskStatus
+         {
+             NotStarted,
 
-    //         [Display(Name = "InProgress")]
-    //         InProgress,
+             InProgress,
 
-    //         [Display(Name = "Completed")]
-    //         Completed
-    //     }
+             Completed
+     }
     public class TaskDetails
     {   
         [Required]
@@ -22,7 +19,7 @@ namespace Domain.Entities
         [Range(1,3)]
         public int Priority {get;set;}
 
-        public string? Status {get;set;} 
+        public TaskStatus Status {get;set;} 
 
     }
 

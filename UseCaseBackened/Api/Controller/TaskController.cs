@@ -16,9 +16,18 @@ namespace Api.Controllers
         }
 
         [HttpGet("list-task")]
-        public List<TaskDetails> GetAllTaskDetails()
+        public IActionResult GetAllTaskDetails()
         {
-            return _taskRepositry.GetAllTask();
+            var task= _taskRepositry.GetAllTask();
+
+            var tasklist = task.Select(x => new 
+            {
+                x.Name,
+                x.Priority,
+                Status = x.Status.ToString()  // Convert Status enum to string
+            }).ToList();
+
+            return Ok(tasklist);
         }
 
         [HttpPost("create-task")]
@@ -28,11 +37,17 @@ namespace Api.Controllers
             {
                 return BadRequest("Task name cannot be empty.");
             }
-            var result= _taskRepositry.SubmitTask(taskDetails);
+            if(taskDetails.Priority<1 || taskDetails.Priority>3)
+            {
+                //ModelState.AddModelError("Priority", "Priority should be between 1 to 3");
+                return BadRequest("Priority should be between 1 to 3");
+            }
             if(!ModelState.IsValid)
             {
                 return BadRequest("Invalid Input");
             }
+            var result= _taskRepositry.SubmitTask(taskDetails);
+
             if(result==0)
             {
                 return BadRequest("Task with this name already exists");
@@ -41,18 +56,29 @@ namespace Api.Controllers
         }
 
         [HttpPut("edit-task/{name}")]
-        public TaskDetails EditTask(string name,[FromBody] TaskDetails taskDetails )
+        public IActionResult EditTask(string name,[FromBody] TaskDetails taskDetails )
         {
-            return _taskRepositry.EditTask(name,taskDetails);
+            if(!ModelState.IsValid)
+            {
+                return BadRequest("Invalid Input");
+            }
+            var result= _taskRepositry.EditTask(name,taskDetails);
+
+            if(result==0)
+            {
+                return BadRequest("Edit Task is not successful");
+            }
+            else
+            {
+                return Ok("Task is Edited successfully");
+            }
+
         }
 
         [HttpDelete("delete-task")]
         public IActionResult DeleteTask([FromBody] string taskname)
         {
-            if (string.IsNullOrEmpty(taskname))
-            {
-                return BadRequest("Task name is required.");
-            }
+            
             var result= _taskRepositry.DeleteTask(taskname);
 
             if(result==0)

@@ -6,7 +6,7 @@ namespace Domain.Repositries
     {
         List<TaskDetails>GetAllTask();
         int SubmitTask(TaskDetails task);
-        TaskDetails EditTask(string name,TaskDetails task);
+        int EditTask(string name,TaskDetails task);
 
         int DeleteTask(string name);
     }

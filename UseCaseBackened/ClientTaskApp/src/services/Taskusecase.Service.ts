@@ -39,7 +39,7 @@ export class TaskusecaseService
     editTask(taskname: string,task: EditTask):Observable <any>
     {
         return this.http.put(`http://localhost:5203/api/Task/edit-task/${taskname}`, task,
-        {headers: { 'content-type': 'application/json' }}).pipe(
+        {headers: { 'content-type': 'application/json' },responseType:'text' as 'json'}).pipe(
             catchError(this.handleError));
     }
 

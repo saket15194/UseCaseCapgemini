@@ -467,3 +467,4 @@ C:\UseCase\UseCaseBackened\TaskTesting.Tests\bin\Debug\net9.0\refs\Microsoft.Ext
 C:\UseCase\UseCaseBackened\TaskTesting.Tests\bin\Debug\net9.0\refs\Microsoft.Extensions.Options.dll
 C:\UseCase\UseCaseBackened\TaskTesting.Tests\bin\Debug\net9.0\refs\Microsoft.Extensions.Primitives.dll
 C:\UseCase\UseCaseBackened\TaskTesting.Tests\bin\Debug\net9.0\refs\System.Diagnostics.EventLog.dll
+C:\UseCase\UseCaseBackened\TaskTesting.Tests\bin\Debug\net9.0\Swashbuckle.AspNetCore.Annotations.dll

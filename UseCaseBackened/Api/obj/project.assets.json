@@ -8382,11 +8382,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\UseCase\\UseCaseBackened\\Api\\api.csproj",
+      "projectUniqueName": "c:\\UseCase\\UseCaseBackened\\Api\\api.csproj",
       "projectName": "api",
-      "projectPath": "C:\\UseCase\\UseCaseBackened\\Api\\api.csproj",
+      "projectPath": "c:\\UseCase\\UseCaseBackened\\Api\\api.csproj",
       "packagesPath": "C:\\Users\\SAKETKUM\\.nuget\\packages\\",
-      "outputPath": "C:\\UseCase\\UseCaseBackened\\Api\\obj\\",
+      "outputPath": "c:\\UseCase\\UseCaseBackened\\Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SAKETKUM\\AppData\\Roaming\\NuGet\\NuGet.Config"

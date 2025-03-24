@@ -33,17 +33,22 @@ export class ListTaskComponent implements OnInit {
   }
 
   onDelete(taskname:string){
+    if(this.selectedTask !=null)
+    {
     this.taskusecaseservice.deleteTask(this.selectedTask).subscribe(
       (response) => {
         // On success, reload the task list
+        this.selectedTask='';   
+
         this.fetchdata();
         
-        alert('Task deleted successfully!');}
+        alert('Task deleted successfully!');
+      }
         ,
         (error) => {
           this.errorMessage = error.message;
         }
-    )
+    )}
     }
 
 
